@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore the packages
-      run: dotnet restore ./src
+      run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore ./src
+      run: dotnet build --no-restore
     - name: Run All Test
-      run: dotnet test --no-build --verbosity normal ./src
+      run: dotnet test --no-build --verbosity normal
