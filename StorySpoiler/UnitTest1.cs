@@ -57,8 +57,7 @@ namespace StorySpoiler
 
         var request = new RestRequest("/api/Story/Create", Method.Post);
         request.AddJsonBody(story);
-
-        var response = client.Execute(request);
+        var response = client.Execute(request);
         var json = JsonSerializer.Deserialize<JsonElement>(response.Content);
         createdStoryId = json.GetProperty("storyId").GetString();
 
